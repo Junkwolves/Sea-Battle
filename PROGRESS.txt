@@ -1,0 +1,53 @@
+
+	PROGRESS:
+
+............................................................................ Set Ships
+
+	- [WIP]  1. Set Ships                                                                                                                            
+_________________________________________________________________ Class Game
+                                          
+ 	- [DONE]  1. Print Map.
+
+ 	- [DONE]  2. PrintLine
+
+ 	- [DONE]  3. Hide Item
+
+ 	- [DONE]  4. Positon Check
+
+	- [DONE]  5. Around Check 1
+
+	- [DONE]  6. Around Check 2
+
+	- [DONE]  7. Around Check 3
+
+	- [DONE]  8. Around Check 4
+
+	- [DONE]  9. Shot
+
+	- [DONE] 10. Try Hit
+
+	- [DONE] 11. Print X RAY
+
+	- [DONE] 12. Print X RAY Line
+
+	- [DONE] 13. Show Item
+_________________________________________________________________ File
+
+	- [DONE]  1. ReadFile
+_________________________________________________________________ Choise
+
+	- [DONE]  1. ChoiseNumber
+
+	- [DONE]  2. ChoiseLetter
+
+	- [DONE]  3. Main_Choice
+_________________________________________________________________ Menu
+
+	- [DONE]  1. Prin Menu
+
+	- [DONE]  2. Choice Item
+_________________________________________________________________ Start Screen
+
+	- [DONE]  1. Print Start Screen
+
+	- [DONE]  2. Print Info
