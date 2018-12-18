@@ -4,9 +4,9 @@
 #include <iostream>
 #include <conio.h>
 
-int tmp = 10;
+int Last_Choice = 2;
 
-int tmp_2 = 4;
+int tmp_2 = 0;
 
 enum class KEYS_2
 {
@@ -26,50 +26,32 @@ void Prin_Menu(int Choice)
 {
 	system("CLS");
 
-	if (tmp == 1 && Choice == 1)
-	{
-		Choice = 2;
-	}
-	else if (tmp == 2 && Choice == 2)
-	{
-		Choice = 1;
-	}
-	else if (tmp == 2 && Choice == 1)
+	if (Choice == 1 && Last_Choice == 1)
 	{
 		Choice = 3;
 	}
-	else if (tmp == 1 && Choice == 2)
-	{
-		Choice = 3;
-	}
-	else if (tmp == 3 && Choice == 1)
-	{
-		Choice = 1;
-	}
-	else if (tmp == 3 && Choice == 2)
+	else if (Choice == 0 && Last_Choice == 1)
 	{
 		Choice = 2;
 	}
-	else if (tmp == 3 && tmp_2 == 4 && Choice == 5)
+	else if (Choice == 1 && Last_Choice == 2)
 	{
-		Choice = 3; tmp_2 = 5;
+		Choice = 1;
 	}
-	else if (tmp == 3 && tmp_2 == 4 && Choice == 4)
+	else if (Choice == 0 && Last_Choice == 2)
 	{
-		Choice = 3; tmp_2 = 5;
+		Choice = 3;
 	}
-	else if (tmp == 3 && tmp_2 == 5 && Choice == 4)
+	else if (Choice == 1 && Last_Choice == 3)
 	{
-		Choice = 3; tmp_2 = 4;
+		Choice = 2;
 	}
-	else if (tmp == 3 && tmp_2 == 5 && Choice == 5)
+	else if (Choice == 0 && Last_Choice == 3)
 	{
-		Choice = 3; tmp_2 = 4;
+		Choice = 1;
 	}
-	else
-	{
 
-	}
+	Last_Choice = Choice;
 
 	std::cout << std::endl << std::endl << std::endl;
 
@@ -97,52 +79,45 @@ void Prin_Menu(int Choice)
 
 	if (Choice == 2 || Choice == 3)
 	{
-	std::cout << "        |=|            ||                                      | |              CONTINUE                                           | |                                     ||            |=| " << std::endl;
+		std::cout << "        |=|            ||                                      | |              CONTINUE                                           | |                                     ||            |=| " << std::endl;
 	}
 	else if (Choice == 1)
 	{
-	std::cout << "        |=|            ||                                      | |            >  CONTINUE                                          | |                                     ||            |=| " << std::endl;
-	tmp = 1;
-	}
+		std::cout << "        |=|            ||                                      | |            >  CONTINUE                                          | |                                     ||            |=| " << std::endl;
 
-	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
-
-	if (Choice == 1 || Choice == 2)
-	{
-		if (tmp_2 == 4)
-		{
-	std::cout << "        |=|            ||                                      | |              X-RAY : OFF / on                                   | |                                     ||            |=| " << std::endl;
-	tmp_2 = 4;
-		}
-		else if (tmp_2 == 5)
-		{
-	std::cout << "        |=|            ||                                      | |              X-RAY : off / ON                                   | |                                     ||            |=| " << std::endl;
-	tmp_2 = 5;
-		}
-	}
-	else if (Choice == 3 && tmp_2 == 4)
-	{
-	std::cout << "        |=|            ||                                      | |            >  X-RAY : OFF / on                                  | |                                     ||            |=| " << std::endl;
-	tmp_2 = 4;
-	tmp = 3;
-	}
-	else if (Choice == 3 && tmp_2 == 5)
-	{
-	std::cout << "        |=|            ||                                      | |            >  X-RAY : off / ON                                  | |                                     ||            |=| " << std::endl;
-	tmp_2 = 5;
-	tmp = 3;
 	}
 
 	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
 
 	if (Choice == 1 || Choice == 3)
 	{
-	std::cout << "        |=|            ||                                      | |              EXIT                                               | |                                     ||            |=| " << std::endl;
+		if (tmp_2 == 0)
+		{
+			std::cout << "        |=|            ||                                      | |              X-RAY : OFF / on                                   | |                                     ||            |=| " << std::endl;
+		}
+		else if (tmp_2 == 1)
+		{
+			std::cout << "        |=|            ||                                      | |              X-RAY : off / ON                                   | |                                     ||            |=| " << std::endl;
+		}
 	}
-	else if (Choice == 2)
+	else if (Choice == 2 && tmp_2 == 0)
 	{
-	std::cout << "        |=|            ||                                      | |            >  EXIT                                              | |                                     ||            |=| " << std::endl;
-	tmp = 2;
+		std::cout << "        |=|            ||                                      | |            >  X-RAY : OFF / on                                  | |                                     ||            |=| " << std::endl;
+	}
+	else if (Choice == 2 && tmp_2 == 1)
+	{
+		std::cout << "        |=|            ||                                      | |            >  X-RAY : off / ON                                  | |                                     ||            |=| " << std::endl;
+	}
+
+	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
+
+	if (Choice == 2 || Choice == 1)
+	{
+		std::cout << "        |=|            ||                                      | |              EXIT                                               | |                                     ||            |=| " << std::endl;
+	}
+	else if (Choice == 3)
+	{
+		std::cout << "        |=|            ||                                      | |            >  EXIT                                              | |                                     ||            |=| " << std::endl;
 	}
 
 	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
@@ -179,74 +154,68 @@ int Choice_Item()
 			{
 			case KEYS_2::W:
 				Prin_Menu(1);
-				return 1;
 				break;
 
 			case KEYS_2::w:
 				Prin_Menu(1);
-				return 1;
 				break;
 
 			case KEYS_2::S:
-				Prin_Menu(2);
-				return 2;
+				Prin_Menu(0);
 				break;
 
 			case KEYS_2::s:
-				Prin_Menu(2);
-				return 2;
+				Prin_Menu(0);
 				break;
 
 			case KEYS_2::A:
-				if (tmp == 3)
+				if (Last_Choice == 2 && tmp_2 == 1)
 				{
-				Prin_Menu(4);
-				return 1;
+					tmp_2 = 0;
+					Prin_Menu(Last_Choice);
 				}
-				return 1;
 				break;
 
 			case KEYS_2::a:
-				if (tmp == 3)
+				if (Last_Choice == 2 && tmp_2 == 1)
 				{
-					Prin_Menu(4);
-					return 1;
+					tmp_2 = 0;
+					Prin_Menu(Last_Choice);
 				}
-				return 1;
 				break;
 
 			case KEYS_2::D:
-				if (tmp == 3)
+				if (Last_Choice == 2)
 				{
-					Prin_Menu(5);
-					return 1;
+					tmp_2 = 1;
+					Prin_Menu(Last_Choice);
 				}
-				return 1;
 				break;
 
 			case KEYS_2::d:
-				if (tmp == 3)
+				if (Last_Choice == 2)
 				{
-					Prin_Menu(5);
-					return 1;
+					tmp_2 = 1;
+					Prin_Menu(Last_Choice);
 				}
-				return 1;
 				break;
 
 			case KEYS_2::Enter:
-				if (tmp == 2)
+				if (Last_Choice == 3)
 				{
 					exit(0);
 				}
-				else if (tmp == 1)
+				else if (Last_Choice == 1)
 				{
-					if (tmp_2 == 4)
+					if (tmp_2 == 0)
 					{
+						Last_Choice = 2;
 						system("CLS");
 						return 10;
 					}
-					else if (tmp_2 == 5)
+					else if (tmp_2 == 1)
 					{
+						Last_Choice = 2;
 						system("CLS");
 						return 11;
 					}
