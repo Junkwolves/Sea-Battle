@@ -7,7 +7,7 @@ public:
 	static int Move_Number;
 	static int P1_Kill;
 	static int P2_Kill;
-	
+
 	static int X_RAY;
 
 	Game_();
@@ -21,10 +21,10 @@ public:
 
 	void Positon_Check(int(&PL)[10][10], int Letter, int Number);
 
-	bool Barrier_Сheck(int(&PL)[10][10], int Letter, int Number, int Equally); 
+	bool Barrier_Сheck(int(&PL)[10][10], int Letter, int Number, int Equally);
 
 	void Around_Check_1(int(&PL)[10][10], int Letter, int Number);
-	
+
 	bool Around_Check_2(int(&PL)[10][10], int Letter, int Number);
 
 	bool Around_Check_3(int(&PL)[10][10], int Letter, int Number);
@@ -43,6 +43,8 @@ public:
 
 	void Show_Item(int(&PL)[10][10], int Leter, int Number);
 
+	bool Last_Move_Check();
+
 private:
 
 	int Letter = 0;
@@ -51,6 +53,8 @@ private:
 	int DDS_P1 = 0;  int DDS_P2 = 0; 								  // Double - deck ship.     |
 	int TDS_P1 = 0;  int TDS_P2 = 0; 								  // Three - deck ship.      |
 	int FDS_P1 = 0;  int FDS_P2 = 0; 								  // Four - deck ship        |
+	int All_Ships_P1;
+	int All_Ships_P2;
 
 	friend int ReadFile(Game_ &Player, int(&P1)[10][10], int Player_Number);
 	friend bool GameOver(Game_ &Game, int(&P1)[10][10], int(&P2)[10][10], int SIZE, int &Winner);
