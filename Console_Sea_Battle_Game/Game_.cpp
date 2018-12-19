@@ -1,7 +1,8 @@
 ﻿#include "pch.h"
 #include "Game_.h"
-#include <iostream>
 
+#include <iostream>
+#include <windows.h>
 
 Game_::Game_()
 {
@@ -87,15 +88,21 @@ void Game_::Hide_Item(int(&PL)[10][10], int Leter, int Number)
 	}
 	else if (PL[Leter][Number] == 5 || PL[Leter][Number] == 6 || PL[Leter][Number] == 7 || PL[Leter][Number] == 8)
 	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
 		std::cout << "X";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	}
 	else if (PL[Leter][Number] == 9)
 	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 8);
 		std::cout << "-";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	}
 	else if (PL[Leter][Number] == 10)
 	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 1);
 		std::cout << "~";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	}
 }
 
@@ -677,11 +684,15 @@ void Game_::Show_Item(int(&PL)[10][10], int Leter, int Number)
 {
 	if (PL[Leter][Number] == 1 || PL[Leter][Number] == 2 || PL[Leter][Number] == 3 || PL[Leter][Number] == 4)
 	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 2);
 		std::cout << "# ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	}
 	else if (PL[Leter][Number] == 5 || PL[Leter][Number] == 6 || PL[Leter][Number] == 7 || PL[Leter][Number] == 8)
 	{
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
 		std::cout << "X ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
 	}
 	else if (PL[Leter][Number] == 9 || PL[Leter][Number] == 10 || PL[Leter][Number] == 0)
 	{

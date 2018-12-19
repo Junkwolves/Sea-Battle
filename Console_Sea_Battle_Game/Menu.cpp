@@ -1,8 +1,10 @@
 #include "pch.h"
 #include "Menu.h"
 #include "Choise_L_N.h"
+
 #include <iostream>
 #include <conio.h>
+#include <windows.h>
 
 int Last_Choice = 2;
 
@@ -83,8 +85,11 @@ void Prin_Menu(int Choice)
 	}
 	else if (Choice == 1)
 	{
-		std::cout << "        |=|            ||                                      | |            >  CONTINUE                                          | |                                     ||            |=| " << std::endl;
-
+		std::cout << "        |=|            ||                                      | |            >  ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+		std::cout << "CONTINUE                                          ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		std::cout << "| |                                     ||            |=| " << std::endl;
 	}
 
 	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
@@ -93,20 +98,44 @@ void Prin_Menu(int Choice)
 	{
 		if (tmp_2 == 0)
 		{
-			std::cout << "        |=|            ||                                      | |              X-RAY : OFF / on                                   | |                                     ||            |=| " << std::endl;
+			std::cout << "        |=|            ||                                      | |              X-RAY : ";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			std::cout << "OFF";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+			std::cout << " / on                                   | |                                     ||            |=| " << std::endl;
 		}
 		else if (tmp_2 == 1)
 		{
-			std::cout << "        |=|            ||                                      | |              X-RAY : off / ON                                   | |                                     ||            |=| " << std::endl;
+			std::cout << "        |=|            ||                                      | |              X-RAY : off / ";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+			std::cout << "ON";
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+			std::cout << "                                   | |                                     ||            |=| " << std::endl;
 		}
 	}
 	else if (Choice == 2 && tmp_2 == 0)
 	{
-		std::cout << "        |=|            ||                                      | |            >  X-RAY : OFF / on                                  | |                                     ||            |=| " << std::endl;
+		std::cout << "        |=|            ||                                      | |            >  ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+		std::cout << "X-RAY ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		std::cout << ": ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+		std::cout << "OFF";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		std::cout << " / on                                  | |                                     ||            |=| " << std::endl;
 	}
 	else if (Choice == 2 && tmp_2 == 1)
 	{
-		std::cout << "        |=|            ||                                      | |            >  X-RAY : off / ON                                  | |                                     ||            |=| " << std::endl;
+		std::cout << "        |=|            ||                                      | |            >  ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+		std::cout << "X-RAY ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		std::cout << ": off / ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+		std::cout << "ON";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		std::cout << "                                  | |                                     ||            |=| " << std::endl;
 	}
 
 	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
@@ -117,7 +146,11 @@ void Prin_Menu(int Choice)
 	}
 	else if (Choice == 3)
 	{
-		std::cout << "        |=|            ||                                      | |            >  EXIT                                              | |                                     ||            |=| " << std::endl;
+		std::cout << "        |=|            ||                                      | |            >  ";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
+		std::cout << "EXIT";
+		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+		std::cout << "                                              | |                                     ||            |=| " << std::endl;
 	}
 
 	std::cout << "        |=|            ||                                      | |                                                                 | |                                     ||            |=| " << std::endl;
