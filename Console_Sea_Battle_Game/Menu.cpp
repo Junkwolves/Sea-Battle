@@ -1,6 +1,7 @@
 #include "pch.h"
 #include "Menu.h"
 #include "Choise_L_N.h"
+#include "cls.h"
 
 #include <iostream>
 #include <conio.h>
@@ -26,7 +27,7 @@ enum class KEYS_2
 
 void Prin_Menu(int Choice)
 {
-	system("CLS");
+	setcur(0, 0);
 
 	if (Choice == 1 && Last_Choice == 1)
 	{

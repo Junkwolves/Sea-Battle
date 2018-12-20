@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Choise_L_N.h" />
+    <ClInclude Include="cls.h" />
     <ClInclude Include="File.h" />
     <ClInclude Include="Game_.h" />
     <ClInclude Include="Game_Over.h" />
@@ -161,6 +162,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Choise_L_N.cpp" />
+    <ClCompile Include="cls.cpp" />
     <ClCompile Include="Console_Sea_Battle_Game.cpp" />
     <ClCompile Include="File.cpp" />
     <ClCompile Include="Game_.cpp" />
